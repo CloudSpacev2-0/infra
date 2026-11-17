@@ -18,7 +18,7 @@ variable "prefix" {
 variable "location" {
   description = "Azure region"
   type        = string
-  default     = "westeurope"
+  default     = "northeurope"
 }
 
 variable "subscription_id" {
