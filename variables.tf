@@ -26,3 +26,9 @@ variable "subscription_id" {
   type        = string
   default     = null
 }
+
+variable "coupon_api_url" {
+  description = "Base URL of the coupon service (e.g. https://coupon-api.<env>.northeurope.azurecontainerapps.io). Empty = coupon feature off."
+  type        = string
+  default     = ""
+}

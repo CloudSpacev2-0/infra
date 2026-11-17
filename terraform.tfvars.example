@@ -1,3 +1,5 @@
 dockerhub_user = "your-dockerhub-username"
 image_tag      = "latest"          # or the short commit SHA from GitHub Actions
 # subscription_id = "00000000-0000-0000-0000-000000000000"
+
+# coupon_api_url = "https://coupon-api.example.northeurope.azurecontainerapps.io"  # optional: turns the coupon feature on

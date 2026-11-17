@@ -132,6 +132,15 @@ resource "azurerm_container_app" "frontend" {
         name  = "ORDER_API_URL"
         value = "https://${azurerm_container_app.order.ingress[0].fqdn}"
       }
+
+      # Optional feature flag: the coupon box appears only when a coupon API URL is given.
+      dynamic "env" {
+        for_each = var.coupon_api_url == "" ? [] : [var.coupon_api_url]
+        content {
+          name  = "COUPON_API_URL"
+          value = env.value
+        }
+      }
     }
   }
 
